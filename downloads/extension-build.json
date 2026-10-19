@@ -1,0 +1,74 @@
+{
+  "schema": "kiki-extension-build/v1",
+  "packaged_date": "2026-10-19",
+  "variant": "release",
+  "version": "0.1.3",
+  "source_repository": "https://github.com/Kikiland-ai/kiki-backend",
+  "source_commit": "c51b65417e3254489233d33e81715eba50c3d66d",
+  "builder": "prototypes/floating_guidance/scripts/build-extension.mjs",
+  "archive": "kiki-windows-0.1.3.zip",
+  "archive_sha256": "3cf07734cac28b122bd6f2fa7e5c90b0db293baf903d5eec984a9c280af3dffe",
+  "archive_size_bytes": 19055,
+  "manifest_version": 3,
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://matlab.mathworks.com/*"
+  ],
+  "reader_matches": [
+    "https://kiki-512012.web.app/*",
+    "https://kiki-json-stream.woodsycarp256.chatgpt.site/*",
+    "https://kiki-screen-receiver.woodsycarp256.chatgpt.site/*"
+  ],
+  "files": [
+    {
+      "path": "background.js",
+      "size_bytes": 10664,
+      "sha256": "1d351ea3644224d0deea5f6f073beaebb12d94dab43a749cd8250ba89c994e89"
+    },
+    {
+      "path": "bridge.js",
+      "size_bytes": 2530,
+      "sha256": "35e52db683a95bb9be9818b0780cc4961ccac15d711d56f60dbabf74d9e4c4a2"
+    },
+    {
+      "path": "config.js",
+      "size_bytes": 256,
+      "sha256": "0a78b190865bf73683f891ea8d48813a9ba351661c1f00889fcc086847823cbe"
+    },
+    {
+      "path": "content.js",
+      "size_bytes": 5751,
+      "sha256": "eb8fc8350a44df10aa443764bf4c15169d1965b2bfd2bd89c5086a7deebf1b30"
+    },
+    {
+      "path": "core.js",
+      "size_bytes": 7313,
+      "sha256": "3280112b21befb8e43402aa7dcb35bfae5d5c4c2b16c24460c2fddca8e335751"
+    },
+    {
+      "path": "manifest.json",
+      "size_bytes": 1002,
+      "sha256": "8af6df88cc00207d248f108330251fe869a54ad17129a88d222a8831ff69f683"
+    },
+    {
+      "path": "popup.html",
+      "size_bytes": 951,
+      "sha256": "e4613ec0603944307667e07d93828150024a9f97cccb51d9156dd80d1cfa15ff"
+    },
+    {
+      "path": "popup.js",
+      "size_bytes": 1051,
+      "sha256": "391f983c3fcd63d1455bf9d98c6d43595689bdd9d574f091b5bab8035d306148"
+    },
+    {
+      "path": "ui.js",
+      "size_bytes": 19613,
+      "sha256": "ce75b1d3a78e19d84cb277263c388d242c819eadca2baba1e8de7d8acc6e9a5c"
+    }
+  ],
+  "notes": "Unmodified upstream release files. Deterministic ZIP metadata; no dev files or credentials. Historical trial ZIP metadata/checksum may differ."
+}

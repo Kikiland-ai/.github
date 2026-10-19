@@ -1,0 +1,279 @@
+{
+  "schema": "kiki-evaluation/v1",
+  "as_of": "2026-10-19",
+  "name": "Kiki",
+  "organisation": "Kikiland-ai",
+  "app_url": "https://kiki-512012.web.app",
+  "demo_url": "https://youtu.be/bhakeLoJr0g",
+  "human_guide": "profile/README.md",
+  "agent_guide": "AGENTS.md",
+  "feature_evidence": "docs/FEATURES.md",
+  "sources": {
+    "design": {
+      "repository": "https://github.com/Kikiland-ai/Design-Thinking",
+      "audited_commit": "2a6c843448d81062f89596b941516f8b7817ec79",
+      "role": "intent, journeys, data model, design system"
+    },
+    "web": {
+      "repository": "https://github.com/Kikiland-ai/kiki-web",
+      "audited_commit": "2b537ce6f49adfd96d2db1ae29babb502e9e5708",
+      "recorded_deployed_app_source": "7c2e68fff9211fb2b8bc93c728231f17d51d53ed",
+      "role": "React app and authenticated Python API"
+    },
+    "backend": {
+      "repository": "https://github.com/Kikiland-ai/kiki-backend",
+      "audited_commit": "c51b65417e3254489233d33e81715eba50c3d66d",
+      "recorded_deployed_engine_source": "cb3e562b3f7140442e716b4f170100b3a2212955",
+      "recorded_native_extension_source": "ab70fa9193022d6c7145e77569ec9b5068c125fb",
+      "role": "lab engine, extension and content tooling"
+    }
+  },
+  "catalog": {
+    "course": "Analog Communication",
+    "chapter": "Analog Modulation",
+    "field": "ECE",
+    "prepared_languages": [
+      "or",
+      "en"
+    ],
+    "concepts": [
+      "C-AM-01",
+      "C-AM-02",
+      "C-AM-03",
+      "C-AM-04",
+      "C-AM-05",
+      "C-AM-06",
+      "C-AM-07",
+      "C-AM-08",
+      "C-AM-09",
+      "C-AM-10"
+    ],
+    "placards_per_concept": 4,
+    "support_dial_levels": 5,
+    "recordings_total": 26,
+    "recordings_odia": 22,
+    "recordings_english": 4,
+    "english_audio_concepts": [
+      "C-AM-08"
+    ],
+    "content_review": "pending",
+    "sentence_alignment": false
+  },
+  "assessment": {
+    "type": "authored_mcq",
+    "concept_questions": 5,
+    "concept_correct_to_pass": 3,
+    "chapter_questions": 10,
+    "chapter_correct_to_pass": 8,
+    "chapter_requires_all_10_concept_passes": true,
+    "other_skill_dimensions": "not assessed; confidence and interaction do not imply mastery"
+  },
+  "materials": {
+    "formats": [
+      "pdf_selectable_text",
+      "pptx_selectable_text"
+    ],
+    "max_megabytes_per_file": 10,
+    "max_files_per_upload": 5,
+    "stored_presentation": "extracted text and upload-history cards",
+    "ocr": false,
+    "automatic_lesson_generation": false
+  },
+  "extension": {
+    "version": "0.1.3",
+    "variant": "release",
+    "manifest_version": 3,
+    "minimum_chrome_version": "116",
+    "download_url": "https://github.com/Kikiland-ai/.github/raw/refs/heads/main/downloads/kiki-windows-0.1.3.zip",
+    "installation": "extract; chrome://extensions; Developer mode; Load unpacked; folder containing manifest.json",
+    "target_origin": "https://matlab.mathworks.com",
+    "provenance": "downloads/extension-build.json",
+    "checksums": "downloads/SHA256SUMS",
+    "requires_mathworks_access_for_lab": true
+  },
+  "lab_trial": {
+    "evidence": "https://github.com/Kikiland-ai/kiki-backend/blob/main/docs/verification/hosted-trial-2026-10-18.md",
+    "date": "2026-10-18",
+    "real_provider_checks_succeeded": 5,
+    "remaining_checks": 0,
+    "completed_stages_in_trial": 0,
+    "total_stages": 12,
+    "verified_scope": [
+      "explicit tab share",
+      "real screen analysis",
+      "coherent hosted/floating Now-Next",
+      "Stop and capture cleanup"
+    ],
+    "full_native_acceptance": false,
+    "additional_capacity": "requires project-team authorization; new session does not reset quota"
+  },
+  "capabilities": [
+    {
+      "id": "accounts_preferences",
+      "status": "shipped",
+      "behavior": "Google sign-in, onboarding, saved language/field/confidence/support and enrollment",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-web/blob/main/apps/web/active.md"
+      ]
+    },
+    {
+      "id": "bilingual_lessons",
+      "status": "shipped",
+      "behavior": "10 concepts, four teaching steps, five-level dial, glossary and saved place",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-web/blob/main/apps/web/src/features/learning/LessonScreen.tsx"
+      ]
+    },
+    {
+      "id": "interactive_models",
+      "status": "shipped",
+      "behavior": "10 scene kinds, keyboard controls and Reset",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-web/blob/main/apps/web/src/features/learning/CamCanvas.tsx"
+      ]
+    },
+    {
+      "id": "narration",
+      "status": "shipped",
+      "behavior": "26 private recordings, playback/pause/seek/speed; English only C-AM-08",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-web/blob/main/apps/web/active.md"
+      ]
+    },
+    {
+      "id": "concept_chapter_checks",
+      "status": "shipped",
+      "behavior": "Server-scored concept/chapter MCQs, drafts, feedback, retries and history",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-web/blob/main/apps/api/src/kiki_api/learning.py"
+      ]
+    },
+    {
+      "id": "material_library",
+      "status": "shipped",
+      "behavior": "Selectable PDF/PPTX text intake, stored text and static history cards",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-web/blob/main/apps/web/src/features/intake/AddMaterial.tsx"
+      ]
+    },
+    {
+      "id": "lab_preparation",
+      "status": "shipped",
+      "behavior": "12 checkpoint reading positions, owned saved notes and continuation",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-web/blob/main/apps/web/src/features/labs/LabPreparation.tsx"
+      ]
+    },
+    {
+      "id": "lab_student_responses",
+      "status": "shipped",
+      "behavior": "Explicit student responses and confirmations with current-context handling",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-web/blob/main/apps/web/src/features/labs/LabStudentInput.tsx"
+      ]
+    },
+    {
+      "id": "live_screen_guidance",
+      "status": "shipped_capacity_exhausted",
+      "behavior": "Hosted real Gemini screen reading and coherent guidance; five-check trial exhausted",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-backend/blob/main/docs/verification/hosted-trial-2026-10-18.md"
+      ]
+    },
+    {
+      "id": "floating_extension",
+      "status": "shipped",
+      "behavior": "Release MV3 extension 0.1.3, exact hosted origin, MATLAB tab binding and Now/Next windows",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-backend/blob/main/prototypes/floating_guidance/scripts/build-extension.mjs"
+      ]
+    },
+    {
+      "id": "responsive_ui",
+      "status": "shipped",
+      "behavior": "Engineering Sketchbook desktop/phone layouts with keyboard and recovery flows",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-web/blob/main/docs/ux/ui-slice-review.md"
+      ]
+    },
+    {
+      "id": "mixed_language_generation",
+      "status": "content_tooling",
+      "behavior": "Recorded source translation/refinement/speech pipeline; not on-demand in student app",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-backend/blob/main/prototypes/mixed_script/evidence/2026-10-13/README.md"
+      ]
+    },
+    {
+      "id": "concept_library_publisher",
+      "status": "content_tooling",
+      "behavior": "Recovered canvas/media packets, SQLite library and web publisher; original generator unavailable",
+      "evidence": [
+        "https://github.com/Kikiland-ai/kiki-backend/blob/main/docs/handoffs/concept-canvas-continuation.md"
+      ]
+    },
+    {
+      "id": "handwriting_repair_viva_teacher_adaptation",
+      "status": "design_only",
+      "behavior": "Handwriting scoring, repair maps, viva, teacher dashboards and broad adaptive curation",
+      "evidence": [
+        "https://github.com/Kikiland-ai/Design-Thinking/blob/main/docs/working-doc/03-feature-journeys.md"
+      ]
+    }
+  ],
+  "local_sample": {
+    "requires": [
+      "Git",
+      "Node.js >=24.12.0"
+    ],
+    "commands": [
+      "git clone https://github.com/Kikiland-ai/kiki-web.git",
+      "cd kiki-web/apps/web",
+      "npm ci",
+      "npm run dev"
+    ],
+    "url": "http://127.0.0.1:5173",
+    "entry": "Open sample student",
+    "mode": "explicit synthetic browser-local sample; no Google/cloud/provider access"
+  },
+  "connected_local": {
+    "requires": [
+      "Node.js >=24.12.0",
+      "Python 3.12",
+      "uv",
+      "approved Firebase/Firestore access and keyless ADC"
+    ],
+    "web_port": 5174,
+    "api_port": 8000,
+    "lab_engine_port": 8100,
+    "guide": "docs/SETUP.md",
+    "no_fixture_fallback": true
+  },
+  "evidence_policy": {
+    "precedence": [
+      "latest dated release/active record",
+      "implemented source/contracts",
+      "historical README/design claims"
+    ],
+    "source_audit": "selected relevant documents, runtime code and extension sources; not an exhaustive repository index",
+    "historical_release_receipts": {
+      "web_tests": 259,
+      "api_passes": 155,
+      "api_opt_in_skips": 2,
+      "rerun_for_this_profile": false
+    },
+    "profile_checks": "python3 scripts/validate.py; upstream extension tests recorded separately during preparation",
+    "no_new_live_provider_calls": true
+  },
+  "limitations": [
+    "Prepared catalog is Odia/English ECE, not all profile languages/fields",
+    "Scientific/native-Odia/pronunciation reviews pending",
+    "English narration missing for nine concepts",
+    "No sentence/word audio alignment",
+    "Hosted trial quota exhausted; full 12-stage native acceptance pending",
+    "No verified practical/academic-English/terminology proficiency claim",
+    "No scanned handwriting OCR, repair map, viva or teacher dashboard",
+    "Ideal models do not control Simulink; known saved-model limitations remain",
+    "Original concept-canvas generator was lost before commit"
+  ]
+}
